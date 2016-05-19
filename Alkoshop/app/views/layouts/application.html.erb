@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Alkoshop</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+<nav class="black" role="navigation">
+  <div class="nav-wrapper container">  <a id="logo-container" href="index.html" class="brand-logo"> <%= image_tag "logo.jpg", id: "logo" %></a>
+    <ul class="right hide-on-med-and-down">
+      <li><%= link_to "Sklep", home_shop_path %></li>
+    </ul>
+
+    <ul id="nav-mobile" class="side-nav">
+      <li><%= link_to "Sklep", home_shop_path %></li>
+    </ul>
+    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+  </div>
+</nav>
+
+
+  <%= yield %>
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l12 s12 center-align">
+          <h5 class="white-text">Znajdź Nas</h5>
+          <a class="non-deco" href="#"> <i class="fa fa-facebook-square fa-5x non-deco" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-map fa-5x non-deco" aria-hidden="true"></i></a>
+          <p class="grey-text text-lighten-4"></p>
+
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
